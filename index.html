@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WiFi Speed Test</h1>
+        <div class="header-controls">
+            <button id="darkModeToggle" class="icon-button">◑</button>
+        </div>
+
+        <div class="network-info">
+            <span class="network-type" id="networkType">--</span>
+            <span class="isp-info" id="ispInfo">--</span>
+        </div>
+        <div class="status" id="status">Click Start to begin</div>
+
+        <div class="button-group">
+            <button id="startBtn" class="button">Start Test</button>
+            <button id="cancelBtn" class="button cancel" style="display: none;">Cancel</button>
+        </div>
+
+        <div class="speed-gauge">
+            <div class="gauge-container">
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <div class="gauge-value" id="gaugeValue">0</div>
+                <div class="gauge-unit">Mbps</div>
+            </div>
+        </div>
+
+        <div class="progress-info">
+            <span class="progress-percent" id="progressPercent">0%</span>
+            <span class="time-remaining" id="timeRemaining">--</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="graph-container">
+            <canvas id="speedGraph"></canvas>
+        </div>
+
+        <div class="history-section">
+            <h2>Test History</h2>
+            <div class="history-chart">
+                <canvas id="historyChart"></canvas>
+            </div>
+            <div class="history-list" id="historyList"></div>
+        </div>        
+        <div class="results">
+            <div class="result-item">
+                <span class="label">Ping:</span>
+                <span class="value" id="ping">--</span>
+                <span class="unit">ms</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Jitter:</span>
+                <span class="value" id="jitter">--</span>
+                <span class="unit">ms</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Download:</span>
+                <span class="value" id="download">--</span>
+                <span class="unit">Mbps</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Upload:</span>
+                <span class="value" id="upload">--</span>
+                <span class="unit">Mbps</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Quality:</span>
+                <span class="value quality" id="quality">--</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Packet Loss:</span>
+                <span class="value" id="packetLoss">--</span>
+                <span class="unit">%</span>
+            </div>
+            <div class="result-item">
+                <span class="label">WebSocket:</span>
+                <span class="value" id="wsLatency">--</span>
+                <span class="unit">ms</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
