@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .button {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-color: #ffffff;
+}
+
+body.dark-mode .button:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .button.cancel {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .gauge-container {
+    border-color: #ffffff;
+}
+
+body.dark-mode .gauge-fill {
+    background-color: #ffffff;
+}
+
+body.dark-mode .result-item {
+    border-bottom-color: #ffffff;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #333333;
+}
+
+body.dark-mode .progress {
+    background-color: #ffffff;
+}
+
+.header-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.icon-button {
+    background: none;
+    border: 2px solid black;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .icon-button {
+    border-color: white;
+}
+
+body.dark-mode .icon-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.network-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.network-type, .isp-info {
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+body.dark-mode .network-type,
+body.dark-mode .isp-info {
+    border-color: white;
+}
+
+.graph-container {
+    margin-bottom: 30px;
+    height: 150px;
+    border: 1px solid #ddd;
+}
+
+body.dark-mode .graph-container {
+    border-color: #333;
+}
+
+#speedGraph {
+    width: 100%;
+    height: 100%;
+}
+
+.history-section {
+    margin-top: 40px;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+
+body.dark-mode .history-section {
+    border-top-color: white;
+}
+
+.history-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.history-chart {
+    height: 150px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .history-chart {
+    border-color: #333;
+}
+
+#historyChart {
+    width: 100%;
+    height: 100%;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+body.dark-mode .history-item {
+    border-bottom-color: #333;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.status {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 27px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 15px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button.cancel {
+    background-color: white;
+    color: black;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.button:active {
+    transform: translateY(0);
+}
+.button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.speed-gauge {
+    margin-bottom: 20px;
+}
+
+.gauge-container {
+    width: 200px;
+    height: 200px;
+    border: 4px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gauge-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: black;
+    transition: height 0.3s ease;
+}
+
+.gauge-value {
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.gauge-unit {
+    font-size: 14px;
+    z-index: 1;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.progress-percent {
+    font-weight: bold;
+}
+
+.time-remaining {
+    color: #666;
+}
+
+.results {
+    margin-bottom: 30px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-size: 16px;
+}
+
+.value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.value.quality {
+    font-size: 20px;
+}
+
+.quality.a { color: #000; }
+.quality.b { color: #333; }
+.quality.c { color: #666; }
+.quality.d { color: #999; }
+.quality.f { color: #ccc; }
+.unit {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: black;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.container {
+    animation: fadeIn 0.5s ease-out;
+}
+ 
+.result-item {
+    animation: fadeIn 0.3s ease-out;
+    animation-fill-mode: both;
+}
+ 
+.result-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+ 
+.result-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+ 
+.result-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+ 
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+ 
+.status.testing {
+    animation: pulse 1s infinite;
+}
+ 
+@keyframes countUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+.value {
+    animation: countUp 0.3s ease-out;
+}
