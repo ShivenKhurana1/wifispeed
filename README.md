@@ -1,8 +1,26 @@
-## WifiSpeed
+# WiFispeed
 
-uhh so like
-this is a wifi speed test
-yk all the cool stuff, download speed, upload speed
-we got charts so you can see how it improved (or did worse)
+A oh so simple wifi speed test right in yo browser :D
 
-ngl, not much technical stuff (html/js/css)
+## ur stacked
+
+- **Ping & Jitter**: See how responsive your connection is
+- **Download Speed**: How fast stuff comes in
+- **Upload Speed**: How fast stuff goes out
+- **Packet Loss**: Check if u dropping data
+- **WebSocket Latency**: Real-time connection testin
+
+## How to use
+
+- Press **Space**
+
+## Tech stuff
+
+Uses vanilla HTML/CSS/JS. no framework!
+
+
+## Running it
+
+Since it's just static files, you can:
+- Open index.html
+- Or serve it with any static file server: `python3 -m http.server` or `npx serve`
